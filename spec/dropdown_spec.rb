@@ -2,7 +2,7 @@
 
 # :dropdown tag para realizar um únicio teste
 # executando o comando rspec --tag @dropdown
-describe 'Caixa de seleção', :dropdown do
+describe 'Caixa de opções', :dropdown do
   it 'item específico simples' do
     visit 'https://training-wheels-protocol.herokuapp.com/dropdown'
     # select só funciona com dropdown com ID
