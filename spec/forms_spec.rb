@@ -8,6 +8,6 @@ describe 'Forms' do
     fill_in 'password', with: 'jarvis!'
     click_button 'Login'
     expect(find('#flash').visible?).to be true
-    sleep 5
+    expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!'
   end
 end
