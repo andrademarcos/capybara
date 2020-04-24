@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'caixas de seleção', :radio do
   before(:each) do
     visit 'https://training-wheels-protocol.herokuapp.com/radios'
