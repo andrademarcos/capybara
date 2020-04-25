@@ -17,7 +17,6 @@ describe 'Upload', :upload do
   it 'upload de imagem', :imagem do
     attach_file('file-upload', @imagem)
     click_button 'Upload'
-    sleep 5
     img = find('#new-image')
     expect(img[:src]).to include '/uploads/bastion-ow.jpg'
   end
