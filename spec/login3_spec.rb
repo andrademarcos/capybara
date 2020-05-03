@@ -12,7 +12,9 @@ describe 'Login com cadastro', :login3 do
       find('input[name=password]').set 'jarvis!'
       click_button 'Entrar'
     end
-    expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!'
+
+    msg = 'Olá, Tony Stark. Você acessou a área logada!'
+    expect(find('#flash')).to have_content msg
   end
 
   it 'cadastro com sucesso' do
@@ -21,6 +23,8 @@ describe 'Login com cadastro', :login3 do
       find('input[name=password]').set '123456'
       click_link 'Criar Conta'
     end
-    expect(page).to have_content 'Dados enviados. Aguarde aprovação do seu cadastro!'
+
+    msg = 'Dados enviados. Aguarde aprovação do seu cadastro!'
+    expect(page).to have_content msg
   end
 end
