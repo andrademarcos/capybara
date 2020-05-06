@@ -2,7 +2,7 @@
 
 describe 'tabs', :tabs do
   before(:each) do
-    visit 'https://training-wheels-protocol.herokuapp.com/tables'
+    visit '/tables'
   end
 
   it 'deve exibir o salário do stark' do

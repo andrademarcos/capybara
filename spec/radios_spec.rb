@@ -2,7 +2,7 @@
 
 describe 'caixas de seleção', :radio do
   before(:each) do
-    visit 'https://training-wheels-protocol.herokuapp.com/radios'
+    visit 'radios'
   end
 
   after(:each) do
