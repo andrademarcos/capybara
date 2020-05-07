@@ -20,7 +20,7 @@ describe 'tabs', :tabs do
   it 'deve exibir o filme velozes' do
     diesel = find('table tbody tr', text: '@vindiesel')
     movie = diesel.all('td')[2].text
-    expect(movie).to eql 'Velozes e Furiosos'
+    expect(movie).to eql 'Fast and Furious'
   end
 
   it 'deve exibir o instagram do chris evans' do
