@@ -29,14 +29,14 @@ describe 'tabs', :tabs do
     expect(instagram).to eql '@teamcevans'
   end
 
-  it 'deve selecionar o Chris Pratt para remoção' do
+  it 'deve selecionar o Chris Pratt para remoção', :pratt do
     pratt = find('table tbody tr', text: 'Chris Pratt')
     pratt.find('a', text: 'delete').click
     msg = page.driver.browser.switch_to.alert.text
     expect(msg).to eql 'Chris Pratt foi selecionado para remoção!'
   end
 
-  it 'deve selecionar o Chris Pratt para edição' do
+  it 'deve selecionar o Chris Pratt para edição', :pratt do
     pratt = find('table tbody tr', text: 'Chris Pratt')
     pratt.find('a', text: 'edit').click
     msg = page.driver.browser.switch_to.alert.text

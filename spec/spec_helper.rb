@@ -17,6 +17,10 @@ RSpec.configure do |config|
   config.before(:example) do
     page.current_window.resize_to(1366, 768)
   end
+  config.after(:example) do |e|
+    nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
+    page.save_screenshot('log/' + nome + '.png')
+  end
 end
 
 Capybara.configure do |config|
